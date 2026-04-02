@@ -29,7 +29,7 @@
 
 ### 编译步骤
 ```bash
-cd /home/wang/scancontext
+cd /your_workspace/src/hdl_localization_AutoInitialize
 catkin_make -DCMAKE_BUILD_TYPE=Release
 source devel/setup.bash
 ```
