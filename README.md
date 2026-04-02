@@ -197,6 +197,16 @@ ndt_num_threads: 4             # NDT 并行线程数
 - `scancontext_init_localizer/README.md`
 - `btc_init_localizer/README.md`
 
+## 📚 参考与致谢
+
+本工作空间的实现参考了以下开源项目：
+
+1. **[hdl_localization](https://github.com/koide3/hdl_localization)** - 提供了基于 NDT 的激光雷达定位框架，本项目的初始位姿估计结果可直接用于 `hdl_localization` 的初始化输入。
+
+2. **[Voxel-SLAM](https://github.com/hku-mars/Voxel-SLAM)** - 提供了 BTC (Binary Triangle Context) 描述子的实现思路，本项目的 BTC 描述子构建与匹配算法参考了该仓库的算法设计。
+
+感谢以上开源项目作者对社区作出的贡献。
+
 ---
 
 **最后更新**: 2025年4月2日  
