@@ -1,0 +1,10 @@
+cloud_topic: /velodyne_points
+odom_topic: /Odometry
+output_dir: /home/wang/scancontext/src/scancontext_init_localizer/scancontext_db
+map_frame: camera_init
+save_every_n: 3 # 每接收到 n 帧数据保存一次（包括描述子和点云文件）。
+sync_queue_size: 20 # 消息同步器内部队列的大小，用于缓存点云和里程计消息，以便进行近似时间同步。
+num_rings: 20 # 扫描上下文描述子的径向环数。
+num_sectors: 60 # 扫描上下文描述子的角度扇区数。
+max_radius: 80.0 # 扫描上下文考虑的最大半径（单位：米）。
+lidar_height: 0.0 # LiDAR 的安装高度（单位：米）。

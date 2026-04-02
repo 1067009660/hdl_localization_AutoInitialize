@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>scancontext_init_localizer</name>
+  <version>0.1.0</version>
+  <description>ScanContext based initial pose estimation with NDT_OMP refinement for hdl_localization.</description>
+
+  <maintainer email="wang@example.com">wang</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>message_filters</depend>
+  <depend>roscpp</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
+  <depend>message_generation</depend>
+  <depend>message_runtime</depend>
+  <depend>ndt_omp</depend>
+
+  <export>
+  </export>
+</package>

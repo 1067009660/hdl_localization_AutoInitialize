@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="scancontext_init_localizer" type="sc_map_builder_node" name="sc_map_builder" output="screen">
+    <rosparam command="load" file="$(find scancontext_init_localizer)/config/sc_builder.yaml" />
+  </node>
+</launch>

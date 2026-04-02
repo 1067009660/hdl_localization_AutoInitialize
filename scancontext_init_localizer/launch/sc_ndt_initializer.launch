@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="scancontext_init_localizer" type="sc_ndt_initializer_node" name="sc_ndt_initializer" output="screen">
+    <rosparam command="load" file="$(find scancontext_init_localizer)/config/sc_initializer.yaml" />
+  </node>
+</launch>

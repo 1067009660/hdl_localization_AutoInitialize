@@ -1,0 +1,6 @@
+---
+bool success
+string message
+geometry_msgs/PoseWithCovarianceStamped initial_pose
+float32 sc_distance
+int32 matched_index

@@ -1,0 +1,19 @@
+db_dir: /home/wang/scancontext/src/scancontext_init_localizer/scancontext_db
+lidar_topic: /velodyne_points
+map_frame: map
+initialpose_topic: /initialpose
+service_wait_cloud_sec: 1.0
+num_candidates: 10  # 在环形键（ring key）粗匹配后，保留的候选帧数量。
+sc_distance_threshold: 0.25 # SC 匹配距离的阈值。如果最佳匹配的 SC 距离大于该值，则认为匹配失败。
+
+num_rings: 20   # 径向分割的环数
+num_sectors: 60 # 角度分割的扇区数
+max_radius: 80.0  # SC 考虑的最大径向距离（单位：米）。超出此距离的点云被忽略
+lidar_height: 0.0 # LiDAR 的安装高度（单位：米）。用于 SC 中点云的高度补偿
+
+ndt_resolution: 1.0 # NDT 匹配的分辨率
+ndt_step_size: 0.1  # NDT 优化时的最大步长（单位：米）。
+ndt_trans_eps: 0.01 # NDT 的变换增量收敛阈值（单位：米？实际包含平移和旋转）。
+ndt_max_iter: 40    # NDT 的最大迭代次数
+ndt_num_threads: 4  # NDT 并行计算的线程数（使用 pclomp 的 OpenMP 版本）
+ndt_neighborhood: 2 # NDT 的邻域搜索方法选择。
