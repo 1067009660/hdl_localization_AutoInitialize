@@ -197,12 +197,6 @@ ndt_num_threads: 4             # NDT 并行线程数
 ### BTC 描述子
 从点云提取平面特征，构建空间三角形，计算二进制投影模式。通过空间哈希加速检索，结合几何验证提高匹配可靠性。
 
-## 📞 支持与反馈
-
-如有问题或建议，请参考各子包的详细文档：
-- `scancontext_init_localizer/README.md`
-- `btc_init_localizer/README.md`
-
 ## 📚 参考与致谢
 
 本工作空间的实现参考了以下开源项目：
