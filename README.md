@@ -1,6 +1,12 @@
 # hdl_localization_AutoInitialize
 本工作空间提供两种基于激光雷达点云的初始位姿估计方法，用于为 `hdl_localization` 等定位系统提供自动重定位初值。两种方法均采用 **离线建库 + 在线检索** 的架构，与 Faster-LIO 建图流程无缝集成。基于ScanContext和BTC描述子自动初始化Hdl重定位算法的初始位姿，不用在Rviz中通过2D Pose Estimate手动初始化
 
+## 🎬 演示效果
+
+![自动初始化演示](./auto_initialize.gif)
+
+*演示内容：通过服务调用自动计算初始位姿并发布到 `/initialpose` 话题*
+
 ## 📊 方法特性对比
 
 | 特性 | Scan Context (SC) 方法 | BTC 描述子方法 |
@@ -204,6 +210,8 @@ ndt_num_threads: 4             # NDT 并行线程数
 1. **[hdl_localization](https://github.com/koide3/hdl_localization)** - 提供了基于 NDT 的激光雷达定位框架，本项目的初始位姿估计结果可直接用于 `hdl_localization` 的初始化输入。
 
 2. **[Voxel-SLAM](https://github.com/hku-mars/Voxel-SLAM)** - 提供了 BTC (Binary Triangle Context) 描述子的实现思路，本项目的 BTC 描述子构建与匹配算法参考了该仓库的算法设计。
+
+3. **[faster-lio](https://github.com/gaoxiang12/faster-lio)** - 提供了高效激光雷达惯性里程计建图框架，本项目与 Faster-LIO 建图流程无缝集成，实时构建描述子数据库。
 
 感谢以上开源项目作者对社区作出的贡献。
 
